@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kaindra OS v2.0</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>Kaindra OS v2.0</h1>
+  <p>Roadmap SMA → Ausbildung | Sistem: Tidur, Ibadah, Kerja, Fisik, Konten</p>
+  <div class="progress-bar"><div id="progress"></div></div>
+</header>
+
+<nav>
+  <button onclick="showTab('dashboard')" class="active">Dashboard</button>
+  <button onclick="showTab('jadwal')">Jadwal</button>
+  <button onclick="showTab('workout')">Workout</button>
+  <button onclick="showTab('konten')">Konten</button>
+  <button onclick="showTab('sleep')">Sleep</button>
+</nav>
+
+<main>
+  <!-- DASHBOARD -->
+  <section id="dashboard" class="tab active">
+    <div class="card">
+      <h2>RULES NON-NEGOTIABLE</h2>
+      <p><b>Bangun:</b> 05:00 | <b>Tidur:</b> 21:30-22:00 | <b>Durasi:</b> 7.5-8 jam</p>
+      <p>Kalau ada aktivitas baru → korbankan: Scroll, Hiburan, Nongkrong. Bukan tidur.</p>
+    </div>
+
+    <div class="card">
+      <h2>Minimum Viable Day</h2>
+      <label><input type="checkbox" data-key="mvd1"> Sholat 5 waktu</label>
+      <label><input type="checkbox" data-key="mvd2"> Upload 1 konten Finance</label>
+      <label><input type="checkbox" data-key="mvd3"> 15 menit olahraga</label>
+    </div>
+
+    <div class="card">
+      <h2>Checklist Harian</h2>
+      <div id="checklist"></div>
+      <button onclick="resetHari()">Reset Hari</button>
+    </div>
+  </section>
+
+  <!-- JADWAL -->
+  <section id="jadwal" class="tab">
+    <div class="card">
+      <h2>FASE 1: MEI-JUNI</h2>
+      <table id="jadwal-fase1"></table>
+    </div>
+    <div class="card">
+      <h2>FASE 2: JULI-DESEMBER</h2>
+      <table id="jadwal-fase2"></table>
+    </div>
+  </section>
+
+  <!-- WORKOUT -->
+  <section id="workout" class="tab">
+    <div class="card" id="workout-plan"></div>
+  </section>
+
+  <!-- KONTEN -->
+  <section id="konten" class="tab">
+    <div class="card">
+      <h2>3 Akun Sosmed</h2>
+      <table id="tema-konten"></table>
+    </div>
+  </section>
+
+  <!-- SLEEP -->
+  <section id="sleep" class="tab">
+    <div class="card">
+      <h2>Sleep Tracker 30 Hari</h2>
+      <div id="sleep-list"></div>
+      <button onclick="addSleep()">+ Tambah Hari</button>
+    </div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
